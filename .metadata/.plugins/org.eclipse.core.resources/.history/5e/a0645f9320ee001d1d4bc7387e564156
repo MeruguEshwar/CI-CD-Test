@@ -1,0 +1,38 @@
+package com.example.captcha.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.captcha.model.Employee;
+import com.example.captcha.repo.EmployeeRepo;
+
+@Service
+public class ServiceImpl implements EmployeService {
+	
+	@Autowired
+	private EmployeeRepo emprepo;
+
+	@Override
+	public int createEmployes(Employee emp) {
+		Employee res = emprepo.save(emp);
+		if(res!=null) {
+			return 1;
+		}else {
+			return 0;
+		}
+	}
+
+	@Override
+	public List<Employee> getEmployees() {
+		return emprepo.findAll();
+	}
+
+	@Override
+	public Optional<Employee> getOneEmployees(int id) {
+		return emprepo.findById(id);
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.ojas.jwt;
+
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+import io.jsonwebtoken.Jwts;
+
+public class TestCls {
+
+	public static void main(String[] args) {
+		Jwts.builder()
+		.setId("")
+		.setSubject("")
+		.setIssuer("")
+		.setIssuedAt(new Date(System.currentTimeMillis()))
+		.setExpiration(new Date(System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(1)));
+	}
+}

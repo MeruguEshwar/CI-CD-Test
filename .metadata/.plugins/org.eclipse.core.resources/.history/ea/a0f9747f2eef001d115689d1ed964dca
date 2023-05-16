@@ -1,0 +1,16 @@
+
+server.port=9999
+spring.application.name=my-oath-name
+
+security.oauth2.client.client-id=618556513502395
+security.oauth2.client.client-secret=d0334022d31e4a02b701aad00956438c
+
+spring.security.oauth2.client.registration.facebook.client-id=618556513502395
+spring.security.oauth2.client.registration.facebook.client-secret=d0334022d31e4a02b701aad00956438c
+
+security.oauth2.client.access-token-uri=https://graph.facebook.com/oauth/access_token
+security.oauth2.client.user-authorization-uri=https://www.facebook.com/dialog/oauth
+security.oauth2.client.token-name=oauth_token
+security.oauth2.client.authentication-scheme=query
+security.oauth2.client.client-authentication-scheme=form
+security.oauth2.resource.user-info-uri=https://graph.facebook.com/me

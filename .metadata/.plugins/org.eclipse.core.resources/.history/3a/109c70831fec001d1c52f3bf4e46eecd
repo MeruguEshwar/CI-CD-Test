@@ -1,0 +1,6 @@
+package com.example.captcha.service;
+
+public interface EmployeService {
+
+	create Employee(Employee emp);
+}

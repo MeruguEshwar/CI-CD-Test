@@ -1,0 +1,38 @@
+package com.example.captcha.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@Entity
+@AllArgsConstructor
+public class Employee {
+
+	@Id
+	@GeneratedValue
+	private int id;
+	private String name;
+	private String email;
+	private String password;
+
+	@Transient
+	private String captcha;
+
+	@Transient
+	private String hidden;
+
+	@Transient
+	private String image;
+
+	
+	
+	public Employee() {
+
+	}
+
+}

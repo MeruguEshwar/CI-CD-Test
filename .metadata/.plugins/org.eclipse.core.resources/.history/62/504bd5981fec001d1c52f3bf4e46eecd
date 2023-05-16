@@ -1,0 +1,8 @@
+package com.example.captcha.service;
+
+import com.example.captcha.model.Employee;
+
+public interface EmployeService {
+
+	createEmployes(Employee emp);
+}

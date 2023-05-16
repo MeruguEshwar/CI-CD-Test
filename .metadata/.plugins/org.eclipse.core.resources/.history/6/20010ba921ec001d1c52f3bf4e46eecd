@@ -1,0 +1,28 @@
+package com.example.captcha.controller;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.captcha.model.Employee;
+import com.example.captcha.service.EmployeService;
+
+@RestController
+public class EmployeController {
+
+	@Autowired
+	private EmployeService empservice;
+
+	@GetMapping
+	public String register(Employee emp) {
+		int empl = empservice.createEmployes(emp);
+		String msg;
+		if (msg != null) {
+			return "inserted successfully";
+		} else {
+			return "not inserted";
+		}
+	}
+}

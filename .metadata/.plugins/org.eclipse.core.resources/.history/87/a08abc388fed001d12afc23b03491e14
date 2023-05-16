@@ -1,0 +1,92 @@
+package com.example.captcha.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
+import lombok.Data;
+
+@Data
+@Entity
+public class Employee {
+
+	@Id
+	@GeneratedValue
+	private int id;
+	private String name;
+	private String email;
+	private String password;
+	private double salary;
+
+	@Transient
+	private String captcha;
+
+	@Transient
+	private String hidden;
+
+	@Transient
+	private String image;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public String getCaptcha() {
+		return captcha;
+	}
+
+	public void setCaptcha(String captcha) {
+		this.captcha = captcha;
+	}
+
+	public String getHidden() {
+		return hidden;
+	}
+
+	public void setHidden(String hidden) {
+		this.hidden = hidden;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public Employee(int id, String name, double salary, String captcha, String hidden, String image) {
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.captcha = captcha;
+		this.hidden = hidden;
+		this.image = image;
+	}
+
+	public Employee() {
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package _18JWTApplicationExample1;
+
+public class MainCls {
+
+	public static void main(String[] args) {
+		
+		JWTutil util = new JWTutil();
+		String token = util.generateToken("123", "Eshwar","Merugu");
+	}
+}

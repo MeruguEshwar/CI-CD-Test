@@ -1,0 +1,46 @@
+package _19SimpleCaptcha;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+import cn.apiclub.captcha.Captcha;
+import cn.apiclub.captcha.backgrounds.TransparentBackgroundProducer;
+
+public class SimpleCaptcha {
+
+	// captcha class object
+	public static Captcha createcaptcha(int height, int width) {
+
+		Captcha cap = new Captcha.Builder(width, height).addBackground(new TransparentBackgroundProducer()).addNoise().addText().build();
+		return cap;
+	}
+
+	// convert into image
+	public static void createImage(Captcha captcha) {
+
+		try {
+			ByteArrayOutputStream bytestream = new ByteArrayOutputStream();
+			ImageIO.write(captcha.getImage(), "png", bytestream);
+
+			FileOutputStream fo = new FileOutputStream("D:/captcha/mycp.png");
+			fo.write(bytestream.toByteArray());
+			fo.flush();
+			fo.close();
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+
+		Captcha c = createcaptcha(200, 80);
+		createImage(c);
+		System.out.println("hi am eshwar captcha is done..");
+
+	}
+}

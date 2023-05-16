@@ -1,0 +1,7 @@
+package _19SimpleCaptcha;
+
+public class SimpleCaptcha {
+
+	public static void main(String[] args) {
+	}
+}

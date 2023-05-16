@@ -1,0 +1,46 @@
+package com.example.captcha.util;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Base64;
+
+import javax.imageio.ImageIO;
+
+import cn.apiclub.captcha.Captcha;
+import cn.apiclub.captcha.backgrounds.GradiatedBackgroundProducer;
+import cn.apiclub.captcha.noise.StraightLineNoiseProducer;
+import cn.apiclub.captcha.text.producer.FiveLetterFirstNameTextProducer;
+
+public class CaptchaUtil {
+
+	// captcha class object
+		public static Captcha createcaptcha(int height, int width) {
+
+			Captcha cap = new Captcha.Builder(width, height).addBackground(new GradiatedBackgroundProducer()).addNoise(new StraightLineNoiseProducer()).addText(new FiveLetterFirstNameTextProducer()).build();
+			return cap;
+		}
+
+		// convert into bynary string
+		public static byte[] encodeBase64(Captcha captcha) {
+			
+			String imageData = null;
+
+			try {
+				ByteArrayOutputStream bytestream = new ByteArrayOutputStream();
+				ImageIO.write(captcha.getImage(), "jpg", bytestream);
+				
+				byte[] arr=(bytestream.toByteArray());
+				
+//				imageData = new String(arr);
+				
+				return arr;
+
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return null;
+		}
+
+}

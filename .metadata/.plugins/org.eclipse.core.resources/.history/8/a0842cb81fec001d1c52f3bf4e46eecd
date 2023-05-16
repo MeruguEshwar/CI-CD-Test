@@ -1,0 +1,11 @@
+package com.example.captcha.service;
+
+import java.util.List;
+
+import com.example.captcha.model.Employee;
+
+public interface EmployeService {
+
+	void createEmployes(Employee emp);
+	List<Employee> getEmployees();
+}

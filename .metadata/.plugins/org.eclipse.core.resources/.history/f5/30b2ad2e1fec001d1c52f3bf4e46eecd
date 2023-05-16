@@ -1,0 +1,5 @@
+package com.example.captcha.repo;
+
+public interface EmployeeRepo {
+
+}

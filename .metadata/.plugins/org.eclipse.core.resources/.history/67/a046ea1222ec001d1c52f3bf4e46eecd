@@ -1,0 +1,5 @@
+package com.example.captcha.util;
+
+public class CaptchaUtil {
+
+}
