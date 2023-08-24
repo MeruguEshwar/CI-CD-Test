@@ -10,6 +10,7 @@ public class Application {
 
 	@Autowired
 	private BCryptPasswordEncoder pwdEncoder;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 		// System.out.println(pwdEnocder.decode($2a$10$tsfQKFjIcFpJ3zO4sTCU9OoDUPQ86R2hpUxcfjr4MVePu));

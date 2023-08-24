@@ -1,9 +1,0 @@
-package _18JWTApplicationExample1;
-
-public class JWTutil {
-
-	//1.Generate Token
-	
-	
-	//2.Get Claims
-}

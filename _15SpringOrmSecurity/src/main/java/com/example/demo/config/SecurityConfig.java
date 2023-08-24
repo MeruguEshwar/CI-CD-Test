@@ -29,10 +29,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-		http.cors().and().csrf().disable().authorizeRequests().antMatchers("/home", "/reg", "/testost").permitAll()
-				.antMatchers("/welcome").authenticated().antMatchers("/admin").hasAuthority("ADMIN").antMatchers("/emp")
-				.hasAuthority("EMPLOYEE").antMatchers("/std").hasAuthority("ADMIN,EMPLOYEE").anyRequest()
-				.authenticated()
+		http.cors().and().csrf().disable().authorizeRequests()
+				.antMatchers("/home", "/reg", "/testost").permitAll()
+				.antMatchers("/welcome").authenticated()
+				.antMatchers("/admin").hasAuthority("ADMIN")
+				.antMatchers("/emp").hasAuthority("EMPLOYEE")
+				.antMatchers("/std").hasAuthority("ADMIN,EMPLOYEE")
+				.anyRequest().authenticated()
 
 				.and().formLogin().defaultSuccessUrl("/welcome", true)
 

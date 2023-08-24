@@ -35,7 +35,7 @@ public class FilesStorageServiceImpl implements FilesStorageService {
 	@Override
 	public void save(Blob file) {
 		try {
-		      Files.copy(file.getInputStream(), this.root.resolve(file.getOriginalFilename()));
+		      Files.copy(((InputStreamSource) file).getInputStream(), this.root.resolve(((MultipartFile) file).getOriginalFilename()));
 		    } catch (Exception e) {
 		      if (e instanceof FileAlreadyExistsException) {
 		        throw new RuntimeException("A file of that name already exists.");

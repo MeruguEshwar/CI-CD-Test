@@ -50,4 +50,13 @@
     <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter"/>
     <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso"/>
     <fullyQualifiedTypeName name="org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+    <fullyQualifiedTypeName name="_22logingApp.TestCls"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.Appender"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.ConsoleAppender"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.Layout"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.SimpleLayout"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.HTMLLayout"/>
+    <fullyQualifiedTypeName name="_23LoggerWithPatterns.TestingApp"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.PatternLayout"/>
 </qualifiedTypeNameHistroy>

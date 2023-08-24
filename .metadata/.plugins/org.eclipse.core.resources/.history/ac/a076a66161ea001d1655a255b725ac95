@@ -1,8 +1,0 @@
-package _18JWTApplicationExample1;
-
-public class MainCls {
-
-	public static void main(String[] args) {
-		System.out.println("hi...");
-	}
-}

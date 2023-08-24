@@ -50,6 +50,8 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.ojas"/>
+			<item value="in.nit"/>
 			<item value="_19SimpleCaptcha"/>
 			<item value="com.ojas.demo"/>
 			<item value="com.example.JWT"/>
@@ -57,6 +59,8 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="_23LoggerWithPatterns"/>
+			<item value="logingApp"/>
 			<item value="com.ojas.captcha"/>
 			<item value="_18JWTApplicationExample1"/>
 			<item value="JWTApplicationExample"/>

@@ -1,5 +1,0 @@
-package com.example.captcha.service;
-
-public class ServiceImpl implements EmployeService {
-
-}
