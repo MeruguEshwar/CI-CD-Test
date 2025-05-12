@@ -1,0 +1,2 @@
+package com.auth.demo.repo;public interface contactrepo {
+}
